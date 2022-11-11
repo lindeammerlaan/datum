@@ -1,0 +1,24 @@
+from time import *
+import datetime 
+from datetime import date
+from datetime import datetime
+
+
+def number_month(month):
+    month = str(datetime.strptime(month, '%B').month)
+    return month
+
+
+def main():
+    #list_animals = read_file("djur_zoo.txt")
+    today = localtime() 
+    year = today[0]
+
+    day,month = input("When do you want to visit the zoo? ").split()
+    day = int(day)
+    month = datetime.strptime(month, '%B').month
+
+    weekday = datetime.date(year, month, day)
+
+
+main()
